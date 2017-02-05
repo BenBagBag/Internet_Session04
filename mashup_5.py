@@ -173,9 +173,12 @@ def parse_command_args(cl_args):
     }
     return cl_arg_keys[cl_args[1]], num_results, rev_key
 
+
 def sort_results(results, sort_key, rev_key):
     results['features'].sort(key=lambda k: k['properties'][sort_key], reverse=rev_key)
+    results = flag_colors(results, rev_key)
     return results
+
 
 def print_it_beautiful(results):
     for result in results:
@@ -184,6 +187,31 @@ def print_it_beautiful(results):
             total=result["properties"]["Total Inspections"],
             average=result["properties"]["Average Score"],
             high=result["properties"]["High Score"]))
+
+
+def assign_color_flag(result, color):
+    result["properties"]["marker-color"] = color
+    return result
+
+
+def flag_colors(results, rev_key):
+    one_third = len(results["features"]) // 3
+    red = "#FF0000"
+    yellow = "#FFFF00"
+    green = "#00FF00"
+    if rev_key:
+        for result in results["features"][:one_third]:
+            result = assign_color_flag(result, green)
+        for result in results["features"][2*one_third:]:
+            result = assign_color_flag(result, red)
+    else:
+        for result in results["features"][:one_third]:
+            result = assign_color_flag(result, red)
+        for result in results["features"][2*one_third:]:
+            result = assign_color_flag(result, green)
+    for result in results["features"][one_third:2*one_third]:
+        result = assign_color_flag(result, yellow)
+    return results
 
 
 if __name__ == '__main__':
