@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 import geocoder
 import json
 import pathlib
-import pprint
 import re
 import requests
 import sys
@@ -158,9 +157,9 @@ def get_geojson(result):
 
 
 def parse_command_args(cl_args):
-    if cl_args[2]:
+    try:
         num_results = int(cl_args[2])
-    else:
+    except ValueError:
         num_results = 10
     try:
         if cl_args.index("reverse"):
@@ -174,6 +173,17 @@ def parse_command_args(cl_args):
     }
     return cl_arg_keys[cl_args[1]], num_results, rev_key
 
+def sort_results(results, sort_key, rev_key):
+    results['features'].sort(key=lambda k: k['properties'][sort_key], reverse=rev_key)
+    return results
+
+def print_it_beautiful(results):
+    for result in results:
+        print("Restaurant name: {name}\nTotal Inspections: {total}\nAverage Score: {average}\nHigh Score: {high}\n".format(
+            name=result["properties"]["Business Name"],
+            total=result["properties"]["Total Inspections"],
+            average=result["properties"]["Average Score"],
+            high=result["properties"]["High Score"]))
 
 
 if __name__ == '__main__':
@@ -183,7 +193,7 @@ if __name__ == '__main__':
     for result in result_generator(num_results):
         geojson = get_geojson(result)
         total_result['features'].append(geojson)
-    total_result['features'].sort(key=lambda k: k['properties'][sort_key], reverse=rev_key)
-    print(total_result)
+    total_result = sort_results(total_result, sort_key, rev_key)
+    print_it_beautiful(total_result["features"])
     with open('my_map.json', 'w') as fh:
         json.dump(total_result, fh, indent=4)
