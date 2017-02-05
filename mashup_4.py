@@ -122,7 +122,7 @@ if __name__ == '__main__':
         'Zip_Code': '98101'
     }
     # html = get_inspection_page(**use_params)
-    html = load_inspection_page('inspection_page.html')
+    html = load_inspection_page('inspection_page1.html')
     parsed = parse_source(html)
     content_col = parsed.find("td", id="contentcol")
     data_list = restaurant_data_generator(content_col)

@@ -2,8 +2,10 @@ from bs4 import BeautifulSoup
 import geocoder
 import json
 import pathlib
+import pprint
 import re
 import requests
+import sys
 
 
 INSPECTION_DOMAIN = 'http://info.kingcounty.gov'
@@ -124,7 +126,7 @@ def result_generator(count):
         'Zip_Code': '98101'
     }
     # html = get_inspection_page(**use_params)
-    html = load_inspection_page('inspection_page.html')
+    html = load_inspection_page('inspection_page1.html')
     parsed = parse_source(html)
     content_col = parsed.find("td", id="contentcol")
     data_list = restaurant_data_generator(content_col)
@@ -155,10 +157,33 @@ def get_geojson(result):
     return geojson
 
 
+def parse_command_args(cl_args):
+    if cl_args[2]:
+        num_results = int(cl_args[2])
+    else:
+        num_results = 10
+    try:
+        if cl_args.index("reverse"):
+            rev_key = False
+    except ValueError:
+        rev_key = True
+    cl_arg_keys = {
+        "highscore": "High Score",
+        "average": "Average Score",
+        "most_inspections": "Total Inspections"
+    }
+    return cl_arg_keys[cl_args[1]], num_results, rev_key
+
+
+
 if __name__ == '__main__':
     total_result = {'type': 'FeatureCollection', 'features': []}
-    for result in result_generator(10):
+    cl_args = sys.argv
+    sort_key, num_results, rev_key = parse_command_args(cl_args)
+    for result in result_generator(num_results):
         geojson = get_geojson(result)
         total_result['features'].append(geojson)
+    total_result['features'].sort(key=lambda k: k['properties'][sort_key], reverse=rev_key)
+    print(total_result)
     with open('my_map.json', 'w') as fh:
-        json.dump(total_result, fh)
+        json.dump(total_result, fh, indent=4)
