@@ -124,16 +124,18 @@ def result_generator(count):
         'Inspection_End': '2/1/2015',
         'Zip_Code': '98101'
     }
-    # html = get_inspection_page(**use_params)
     html = load_inspection_page('inspection_page1.html')
     parsed = parse_source(html)
     content_col = parsed.find("td", id="contentcol")
     data_list = restaurant_data_generator(content_col)
-    for data_div in data_list[:count]:
+    data_results = []
+    for data_div in data_list:
         metadata = extract_restaurant_metadata(data_div)
         inspection_data = get_score_data(data_div)
         metadata.update(inspection_data)
-        yield metadata
+        data_results.append(metadata)
+    data_results = sort_results(data_results, sort_key, rev_key)
+    return data_results[:count]
 
 
 def get_geojson(result):
@@ -175,8 +177,7 @@ def parse_command_args(cl_args):
 
 
 def sort_results(results, sort_key, rev_key):
-    results['features'].sort(key=lambda k: k['properties'][sort_key], reverse=rev_key)
-    results = flag_colors(results, rev_key)
+    results.sort(key=lambda k: k[sort_key], reverse=rev_key)
     return results
 
 
@@ -218,10 +219,11 @@ if __name__ == '__main__':
     total_result = {'type': 'FeatureCollection', 'features': []}
     cl_args = sys.argv
     sort_key, num_results, rev_key = parse_command_args(cl_args)
-    for result in result_generator(num_results):
+    initial_results = result_generator(num_results)
+    for result in initial_results:
         geojson = get_geojson(result)
         total_result['features'].append(geojson)
-    total_result = sort_results(total_result, sort_key, rev_key)
+    total_result = flag_colors(total_result, rev_key)
     print_it_beautiful(total_result["features"])
     with open('my_map.json', 'w') as fh:
         json.dump(total_result, fh, indent=4)

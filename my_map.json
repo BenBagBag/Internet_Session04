@@ -1,226 +1,12 @@
 {
     "features": [
         {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.3383896,
-                    47.60653019999999
-                ]
-            },
             "properties": {
-                "Business Name": "1000 SPIRITS",
-                "Total Inspections": 3,
-                "Average Score": 31.666666666666668,
-                "High Score": 70,
-                "marker-color": "#FF0000"
-            },
-            "type": "Feature",
-            "bbox": [
-                -122.3397385802915,
-                47.60518121970849,
-                -122.3370406197085,
-                47.60787918029149
-            ]
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.3393953,
-                    47.608434
-                ]
-            },
-            "properties": {
-                "Business Name": "GENGHIS KHAN RESTAURANT",
-                "Total Inspections": 3,
-                "Average Score": 24.333333333333332,
-                "High Score": 73,
-                "marker-color": "#FF0000"
-            },
-            "type": "Feature",
-            "bbox": [
-                -122.3407442802915,
-                47.60708501970849,
-                -122.3380463197085,
-                47.60978298029149
-            ]
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.3401409,
-                    47.608632
-                ]
-            },
-            "properties": {
-                "Business Name": "SAFFRON STREET VENDING (KC269) @ 901 S OCCIDENTAL AVE",
-                "Total Inspections": 6,
-                "Average Score": 52.5,
-                "High Score": 75,
-                "marker-color": "#FF0000"
-            },
-            "type": "Feature",
-            "bbox": [
-                -122.3414898802915,
-                47.6072830197085,
-                -122.3387919197085,
-                47.6099809802915
-            ]
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.3336292,
-                    47.6131788
-                ]
-            },
-            "properties": {
-                "Business Name": "DRAGONFISH ASIAN CAFE",
-                "Total Inspections": 3,
-                "Average Score": 26.0,
-                "High Score": 78,
-                "marker-color": "#FFFF00"
-            },
-            "type": "Feature",
-            "bbox": [
-                -122.3349781802915,
-                47.6118298197085,
-                -122.3322802197085,
-                47.6145277802915
-            ]
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.3373614,
-                    47.6087419
-                ]
-            },
-            "properties": {
-                "Business Name": "TRIPLE DOOR",
-                "Total Inspections": 1,
-                "Average Score": 80.0,
-                "High Score": 80,
-                "marker-color": "#FFFF00"
-            },
-            "type": "Feature",
-            "bbox": [
-                -122.3387103802915,
-                47.6073929197085,
-                -122.3360124197085,
-                47.6100908802915
-            ]
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.339531,
-                    47.609327
-                ]
-            },
-            "properties": {
-                "Business Name": "HARD ROCK CAFE,  1st Floor",
-                "Total Inspections": 4,
-                "Average Score": 30.25,
-                "High Score": 83,
-                "marker-color": "#FFFF00"
-            },
-            "type": "Feature",
-            "bbox": [
-                -122.3408799802915,
-                47.6079780197085,
-                -122.3381820197085,
-                47.6106759802915
-            ]
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.337961,
-                    47.6051715
-                ]
-            },
-            "properties": {
-                "Business Name": "OKINAWA TERIYAKI",
-                "Total Inspections": 3,
-                "Average Score": 28.333333333333332,
-                "High Score": 85,
-                "marker-color": "#00FF00"
-            },
-            "type": "Feature",
-            "bbox": [
-                -122.3393099802915,
-                47.6038225197085,
-                -122.3366120197085,
-                47.6065204802915
-            ]
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.3336181,
-                    47.6159137
-                ]
-            },
-            "properties": {
-                "Business Name": "LA LOT RESTAURANT AND BAR",
-                "Total Inspections": 2,
-                "Average Score": 62.5,
-                "High Score": 90,
-                "marker-color": "#00FF00"
-            },
-            "type": "Feature",
-            "bbox": [
-                -122.3349670802915,
-                47.6145647197085,
-                -122.3322691197085,
-                47.6172626802915
-            ]
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.3329909,
-                    47.60836339999999
-                ]
-            },
-            "properties": {
-                "Business Name": "MUSTARD SEED CAFE",
-                "Total Inspections": 3,
-                "Average Score": 34.333333333333336,
-                "High Score": 100,
-                "marker-color": "#00FF00"
-            },
-            "type": "Feature",
-            "bbox": [
-                -122.3333108,
-                47.6081476,
-                -122.332671,
-                47.6085793
-            ]
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.3382185,
-                    47.6085307
-                ]
-            },
-            "properties": {
-                "Business Name": "SPICE ORIENT",
-                "Total Inspections": 3,
+                "marker-color": "#00FF00",
                 "Average Score": 61.0,
+                "Total Inspections": 3,
                 "High Score": 105,
-                "marker-color": "#00FF00"
+                "Business Name": "SPICE ORIENT"
             },
             "type": "Feature",
             "bbox": [
@@ -228,7 +14,221 @@
                 47.6085307,
                 -122.3382026,
                 47.6085374
-            ]
+            ],
+            "geometry": {
+                "coordinates": [
+                    -122.3382185,
+                    47.6085307
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "properties": {
+                "marker-color": "#00FF00",
+                "Average Score": 34.333333333333336,
+                "Total Inspections": 3,
+                "High Score": 100,
+                "Business Name": "MUSTARD SEED CAFE"
+            },
+            "type": "Feature",
+            "bbox": [
+                -122.3333108,
+                47.6081476,
+                -122.332671,
+                47.6085793
+            ],
+            "geometry": {
+                "coordinates": [
+                    -122.3329909,
+                    47.60836339999999
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "properties": {
+                "marker-color": "#00FF00",
+                "Average Score": 62.5,
+                "Total Inspections": 2,
+                "High Score": 90,
+                "Business Name": "LA LOT RESTAURANT AND BAR"
+            },
+            "type": "Feature",
+            "bbox": [
+                -122.3349670802915,
+                47.6145647197085,
+                -122.3322691197085,
+                47.6172626802915
+            ],
+            "geometry": {
+                "coordinates": [
+                    -122.3336181,
+                    47.6159137
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "properties": {
+                "marker-color": "#FFFF00",
+                "Average Score": 28.333333333333332,
+                "Total Inspections": 3,
+                "High Score": 85,
+                "Business Name": "OKINAWA TERIYAKI"
+            },
+            "type": "Feature",
+            "bbox": [
+                -122.3393099802915,
+                47.6038225197085,
+                -122.3366120197085,
+                47.6065204802915
+            ],
+            "geometry": {
+                "coordinates": [
+                    -122.337961,
+                    47.6051715
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "properties": {
+                "marker-color": "#FFFF00",
+                "Average Score": 30.25,
+                "Total Inspections": 4,
+                "High Score": 83,
+                "Business Name": "HARD ROCK CAFE,  1st Floor"
+            },
+            "type": "Feature",
+            "bbox": [
+                -122.3408799802915,
+                47.6079780197085,
+                -122.3381820197085,
+                47.6106759802915
+            ],
+            "geometry": {
+                "coordinates": [
+                    -122.339531,
+                    47.609327
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "properties": {
+                "marker-color": "#FFFF00",
+                "Average Score": 80.0,
+                "Total Inspections": 1,
+                "High Score": 80,
+                "Business Name": "TRIPLE DOOR"
+            },
+            "type": "Feature",
+            "bbox": [
+                -122.3387103802915,
+                47.6073929197085,
+                -122.3360124197085,
+                47.6100908802915
+            ],
+            "geometry": {
+                "coordinates": [
+                    -122.3373614,
+                    47.6087419
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "properties": {
+                "marker-color": "#FF0000",
+                "Average Score": 26.0,
+                "Total Inspections": 3,
+                "High Score": 78,
+                "Business Name": "DRAGONFISH ASIAN CAFE"
+            },
+            "type": "Feature",
+            "bbox": [
+                -122.3349781802915,
+                47.6118298197085,
+                -122.3322802197085,
+                47.6145277802915
+            ],
+            "geometry": {
+                "coordinates": [
+                    -122.3336292,
+                    47.6131788
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "properties": {
+                "marker-color": "#FF0000",
+                "Average Score": 52.5,
+                "Total Inspections": 6,
+                "High Score": 75,
+                "Business Name": "SAFFRON STREET VENDING (KC269) @ 901 S OCCIDENTAL AVE"
+            },
+            "type": "Feature",
+            "bbox": [
+                -122.3414898802915,
+                47.6072830197085,
+                -122.3387919197085,
+                47.6099809802915
+            ],
+            "geometry": {
+                "coordinates": [
+                    -122.3401409,
+                    47.608632
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "properties": {
+                "marker-color": "#FF0000",
+                "Average Score": 24.333333333333332,
+                "Total Inspections": 3,
+                "High Score": 73,
+                "Business Name": "GENGHIS KHAN RESTAURANT"
+            },
+            "type": "Feature",
+            "bbox": [
+                -122.3407442802915,
+                47.60708501970849,
+                -122.3380463197085,
+                47.60978298029149
+            ],
+            "geometry": {
+                "coordinates": [
+                    -122.3393953,
+                    47.608434
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "properties": {
+                "marker-color": "#FF0000",
+                "Average Score": 31.666666666666668,
+                "Total Inspections": 3,
+                "High Score": 70,
+                "Business Name": "1000 SPIRITS"
+            },
+            "type": "Feature",
+            "bbox": [
+                -122.3397385802915,
+                47.60518121970849,
+                -122.3370406197085,
+                47.60787918029149
+            ],
+            "geometry": {
+                "coordinates": [
+                    -122.3383896,
+                    47.60653019999999
+                ],
+                "type": "Point"
+            }
         }
     ],
     "type": "FeatureCollection"
